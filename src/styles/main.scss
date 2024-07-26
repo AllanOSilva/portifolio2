@@ -1,0 +1,198 @@
+@use "./cores";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+ 
+body{
+    background-color: cores.$backgroundColor;
+    color: cores.$textColor;
+}
+
+#elemento{
+    border-radius: 16px;
+    padding: 16px;
+    font-weight: 500;
+    background-image: repeating-conic-gradient(from var(--a), green 0%, green 5%, transparent 5%, transparent 40%, green 50%,);
+    
+    animation: animate 1.5s linear infinite;
+}
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate{
+    0%{
+        --a:0deg;
+    }
+    100%{
+        --a:360deg;
+    }
+}
+
+
+
+#elemento::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+ 
+    
+    
+}
+#elemento::after{
+    content: 'Sou um engenheiro de front-end apaixonado por criar experiências digitais envolventes e funcionais. Desenvolvi um profundo interesse em transformar designs criativos em realidade interativa na web para traduzir conceitos de design em interfaces intuitivas e responsivas.';
+    height: 100%;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-color: cores.$backgroundColor;
+}
+
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: 767px){
+        max-width: 70%;
+    }
+
+    @media screen and (min-width: 768px) and ( max-width: 1023px) {
+       max-width: 80%;
+    }
+
+}
+
+header{
+    padding: 24px;
+
+    img{
+        height: 150px;
+        width: 150px;
+    }
+    
+
+    .profile-avatar{
+        display: block;
+        justify-content: center;
+        margin: 0 auto 24px;
+        border-radius:50%;
+    }
+}
+.orbit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.profile-bio{
+    text-align: center;
+    &-name{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    &-subtitle{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    &-description{
+        font-size: 14px;
+        opacity: 0.7;
+    }
+}
+
+.profile-bio-indicator{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin: 32px 0 ;
+    font-size: 25px;
+    
+}
+.profile-bio-skills{
+    text-align: center;
+    font-weight: bold;
+    margin: 32px 0 ;
+    font-size: 24px
+}
+
+.social-links{
+      
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;  
+    li{
+        list-style: none;
+
+        img{
+            transition: all ease .3s;
+            &:hover{
+                transform: scale(2);
+                filter: drop-shadow(0px 0px 4px #fff);
+            }
+        }
+    }
+}
+
+.projects-list{
+    
+    &-item{
+        a{
+            text-decoration: none;
+            background-color: cores.$buttonColor;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            color: cores.$textColor;
+            border: 3px solid cores.$buttonColor;
+            transition: all ease .5s;
+
+            &:hover{
+                color: cores.$buttonColor;
+                background-color: transparent;
+                
+            }
+        }
+    }
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    tr:nth-child(even){
+        background-color: cores.$tabelaConteudo2;
+        color: cores.$textColor2;
+    }
+}
+
+thead {
+    background: cores.$tabelaConteudo;
+}
+th, tr, td{
+    padding: 6px;
+    border: 1px solid cores.$tabelaConteudo;
+}
+
