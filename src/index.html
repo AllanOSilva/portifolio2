@@ -8,25 +8,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="./styles/main.scss">
 <link rel="stylesheet" href="./styles/cores.scss">
     <title>Portifólio</title>
 </head>
 <body>
-    <div>
-        
+    <div id="navegador">
+        <nav role="navigation">
+          <div class="py-3 text-center border-bottom">
+            <img style="max-width: 100px;" src="./images/meulogo.svg" alt="" class="invert">
+          </div>
+        </nav>
+        <div class="navbar-expand-md">
+          <div class="navbar-dark text-center my-2">
+            <button class="mb-5 navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+            </button>
+          </div>
+          <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link active"  href="#">Início |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Mim |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projetos |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Habilidades</a>
+              </li>
+              <li class="nav-item dropdown">
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Contact us</a></li>
+                </ul>
+              </li>      
+            </ul>
+          </div>
+        </div>
     </div>
-    <div class="container">
-        <header >
+    <div class="container inicio">
+        <header class="align-middle">
+            <img class="fundo1" src="./images/dev.png" alt="dev">
             <div class="orbit-container box">
                 <img class="profile-avatar orbit-image" src="./images/selfie.jpg">
             </div>
             <div  class="profile-bio">
                 <h1 class="profile-bio-name bio2">Állan Oliveira</h1>
                 <h2 class="profile-bio-subtitle bio2">Engenheiro front-end</h2>
-                <p id="elemento" class="profile-bio-description bio2"></p>
+                <p id="elemento" class="profile-bio-description bio2">Sou um engenheiro de front-end apaixonado por criar experiências digitais envolventes e funcionais. Desenvolvi um profundo interesse em transformar designs criativos em realidade interativa na web para traduzir conceitos de design em interfaces intuitivas e responsivas.</p>
         </header>
+    <section id="link" class="links">
         <nav>
             <ul class="social-links">
                 <li>
@@ -51,6 +87,7 @@
  
             </ul>
         </nav>
+    </section>
         <div class="rgb-border">
             <p class="profile-bio-indicator">Visite alguns dos meus projetos</p>
         </div>

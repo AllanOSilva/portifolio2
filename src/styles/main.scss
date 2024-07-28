@@ -7,55 +7,61 @@
     box-sizing: border-box;
     font-family: 'Roboto';
 }
+
+#navegador{
+    background-image: linear-gradient(rgb(31, 204, 31) 0%, rgb(54, 175, 54) 5%, transparent);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 123;
+    padding-bottom: 12px;
+    a{
+        font-family: 'cabin', monospace;
+        font-size: 16px;
+        color: #dcdde1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    }
+}
+
+.inicio{
+    header{
+        margin-bottom: 200px;
+        .fundo1{
+            position: absolute;
+            left: 10%;
+            width: 80vw;
+            height: 100vh;
+            opacity: .75;
+            justify-content: center;
+            z-index: -1;
+            background-size: contain;
+            filter: blur(1px);
+        }
+        // background-image: url("../images/dev.png");
+        // opacity: .25;
+        // background-repeat: no-repeat;
+        // width: 100%;
+        // background-size: cover;
+    }
+    
+}
  
 body{
-    background-color: cores.$backgroundColor;
-    color: cores.$textColor;
+    background: linear-gradient(0deg, #dcdde1 0%, #00a8ff 50%, #192a56 100%);
+    color: cores.$textColor2;
 }
 
 #elemento{
-    border-radius: 16px;
-    padding: 16px;
-    font-weight: 500;
-    background-image: repeating-conic-gradient(from var(--a), green 0%, green 5%, transparent 5%, transparent 40%, green 50%,);
-    
-    animation: animate 1.5s linear infinite;
+   font-size: 24px;
+   text-align: center;
+   align-items: center;
+    font-weight: 800;
+    text-shadow: 1px 1px 6px black;
+    text-decoration-color: gray;
+    color: #fff;
 }
-@property --a {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-}
-
-@keyframes animate{
-    0%{
-        --a:0deg;
-    }
-    100%{
-        --a:360deg;
-    }
-}
-
-
-
-#elemento::before{
-    content: '';
-    height: 100%;
-    width: 100%;
- 
-    
-    
-}
-#elemento::after{
-    content: 'Sou um engenheiro de front-end apaixonado por criar experiências digitais envolventes e funcionais. Desenvolvi um profundo interesse em transformar designs criativos em realidade interativa na web para traduzir conceitos de design em interfaces intuitivas e responsivas.';
-    height: 100%;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    background-color: cores.$backgroundColor;
-}
-
 
 li{
     list-style: none;
@@ -96,15 +102,18 @@ header{
     }
 }
 .orbit-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    justify-content: space-around;
+    
    
 }
 
 
 .profile-bio{
+    display: block;
     text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
     &-name{
         font-size: 24px;
         margin-bottom: 8px;
@@ -114,6 +123,7 @@ header{
         margin-bottom: 8px;
     }
     &-description{
+        display: block;
         font-size: 14px;
         opacity: 0.7;
     }
@@ -135,7 +145,6 @@ header{
 }
 
 .social-links{
-      
     display: flex;
     justify-content: space-between;
     max-width: 240px;
@@ -149,6 +158,7 @@ header{
             &:hover{
                 transform: scale(2);
                 filter: drop-shadow(0px 0px 4px #fff);
+                filter: drop-shadow(0px 0px 2px #080808);
             }
         }
     }
