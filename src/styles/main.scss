@@ -102,6 +102,7 @@ header{
     }
 }
 .orbit-container {
+    margin-top: 12px;
     display: block;
     justify-content: space-around;
     
@@ -115,11 +116,11 @@ header{
     color: #fff;
     text-shadow: 1px 1px 2px black;
     &-name{
-        font-size: 24px;
+        font-size:34px;
         margin-bottom: 8px;
     }
     &-subtitle{
-        font-size: 14px;
+        font-size: 34px;
         margin-bottom: 8px;
     }
     &-description{
@@ -131,8 +132,10 @@ header{
 
 .profile-bio-indicator{
     text-align: center;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
+    font-weight: 800;
+    text-transform: uppercase;
     margin: 32px 0 ;
     font-size: 25px;
     
@@ -194,7 +197,7 @@ table{
     text-align: center;
     tr:nth-child(even){
         background-color: cores.$tabelaConteudo2;
-        color: cores.$textColor2;
+        color: black;
     }
 }
 
